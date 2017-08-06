@@ -18,9 +18,9 @@ tagline: Java Developer
 pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 #sidebar links
-email: sj@qq.com
+#email: sj@qq.com
 #phone: 012 345 6789
-website: http://weibo.com/u/1927606594
+#website: http://weibo.com/u/1927606594
 #linkedin: alandoe
 #github: sharu725
 #twitter: '@webjeda'
