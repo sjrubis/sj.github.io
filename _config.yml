@@ -1,31 +1,71 @@
+# Basic
+title: 梁海键
+subtitle: 个人站
+description: 欢迎来到我的个人站~
+# 头像里面的标题
+avatarTitle: SJ
+# 头像里面的描述
+avatarDesc: Java / 机器学习
+url: "http://lianghaijian.com"
 
-title: SJ的个人博客
-url: 'http://lianghaijian.com'
-baseurl: '/' #change it according to your repository name
+# Comment
+comment:
+    # disqus: leopard
+    # duoshuo: leopard 
+    # cloudTie: leopard
+
+# Social
+social:
+    weibo: 1927606594 
+    github: leopardpan
+    # twitter: 
+    mail: sj@qq.com
+
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: 8ba1c6be0953b6f9c2ba38e57f615421  
+
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+ga:
+    id: UA-84134159-3   
+    host: auto  
 
 
-# Enable one of these styles by removing #. Style will be applied only after restarting the build or serve.
-#style: styles-2
-#style: styles-3
-#style: styles-4
-#style: styles-5
-#style: styles-6
+# 《----------------- 上面的信息修改成你自己的 ---------------------------》
+#
+#
+#  _post/ 下的文章更换成你自己的文章
+#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
+#
+#
+# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
 
-#Profile information
-name: SJ
-tagline: Java Developer
-pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+permalink: /:year/:month/:title/
+# Format
+highlighter: rouge
 
-#sidebar links
-email: sj@qq.com
-phone: 012 345 6789
-website: http://weibo.com/u/1927606594
-linkedin: alandoe
-github: sharu725
-twitter: '@webjeda'
+textColor: #FF0000
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: clear
+
+# The blog button should not be removed.
+blog_button:
+    title: 博客主页
+
+# Navigation buttons in the front page.s
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}      
+    - {title: 关于我, description: about, url: '/about'}      
+    
+
+# Pagination
+gems: [jekyll-paginate,jekyll-sitemap]
+paginate: 20
+paginate_path: "page/:num/"
 
 
-# Tracker
-analytics: UA-83979019-1
-#Update all the sections by editing the files inside _includes folder.
