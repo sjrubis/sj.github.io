@@ -1,84 +1,132 @@
-# leopard
+> NOTE! Kiko-plus theme will not be update anymore. Please see the new and easier version, [kiko-now](https://github.com/AWEEKJ/kiko-now) theme which is mixed [jekyll-now](https://github.com/barryclark/jekyll-now) and Kiko-plus.
 
-[leopard](http://baixin.io) 是一个简洁的博客模板，如果你也喜欢请 Star ，你的 Star 是我持续更新的动力, 谢谢 😄.
+# Kiko Plus Theme
 
-### 使用手册
+![image](/images/image.png)
 
-[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)  :  使用Jekyll搭建个人博客的教程，以及如果把博客模板修改成你自己的博客，里面也有大量的评论，及 Jekyll 搭建博客出现过的问题。
+You can see live demo [here](https://aweekj.github.io/Kiko-plus). This theme is inspired by [Kiko](http://github.com/gfjaru/Kiko) theme.
 
-[HEXO搭建个人博客](http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/) : 使用 HEXO 基于 Github Page 搭建个人博客， 教程里面累计了大量提问和评论，如果你在搭建博客时遇到问题，可以看看这个教程。 
+## Features
 
-
-### 使用条件
-
-Jekyll 支持 Mac 、Windows、ubuntu 、Linux 操作系统                     
-Jekyll 需要依赖：Ruby、bundler
-
-
-#### 安装Jekyll
-
-[Jekyll中文官方文档](http://jekyll.bootcss.com/) ， 如果你已经安装过了 Jekyll，可以忽略此处。
-
-> $ gem install jekyll
-
-#### 获取博客模板
-
-> $ git clone https://github.com/leopardpan/leopardpan.github.io.git
-
-或者直接[下载博客](https://github.com/leopardpan/leopardpan.github.io/archive/master.zip)   
-
-进leopardpan.github.io/ 目录下， 开启本地服务 
-
-> $ jekyll server
-
-在浏览器输入 [127.0.0.1:4000](127.0.0.1:4000) ， 就可以看到博客效果了。
+- Disqus comment system
+- Google analytics
+- Pagination support
+- Custom tags
+- SEO support
 
 
-### 提示
+## Installation
 
->* 如果你想使用我的模板，请把 _posts/ 目录下的文章都去掉。
->* 修改 _config.yml 文件里面的内容为你自己的个人信息。
+#### Method 1: new master's repository (The Best)
 
-如果在部署博客的时候发现问题，可以直接在[Issues](https://github.com/leopardpan/leopardpan.github.io/issues)里面提问。        
+1. First [fork](https://github.com/AWEEKJ/Kiko-plus/fork) it.
+2. Change your forked repository name _Kiko-plus_ to __USERNAME.github.io__ where __USERNAME__ is your github username.
+3. Access your new blog via [https://username.github.io](https://username.github.io).
+4. [See configuration](#configuration).
 
+#### Method 2: gh-pages in existing repository
 
-### 把这个博客变成你自己的博客
+1. Create a new branch called _gh-pages_ in the repository where you want to add a template [managing branches](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/).
+2. From command line run `git clone https://github.com/AWEEKJ/Kiko-plus.git` - this will clone _Kiko-plus_ template to your computer.
+3. Create new branch `git checkout -b gh-pages` where _gh-pages_ will be your branch name.
+4. Add remote, which is your repo from the first step, to your new branch `git remote add gh-pages https://github.com/<yourName>/<yourMaster>/gh-pages`. _yourName_ is your account name and _yourMaster_ is your repository.
+5. Push new branch to remote `git push gh-pages`.
+6. Update `_config.yml` file by changing `baseurl: "<branchName>"` _branchName_ is your branch name where _gh-pages_ resides. See [configuration](#configuration).
 
-根据上面【提示】修改过后，在你的github里创建一个username.github.io的仓库，username指的值你的github的用户名。      
-创建完成后，把我的这个模板使用git push到你的username.github.io仓库下就行了。
-搭建博客如果遇到问题可以看看我教程[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)。
+## Configuration
 
+All configuration is done via `_config.yml` file which you will find in your main repo folder. Change this `<something>` to yours.
 
-### 效果预览
+### Basic
 
-#### 头像效果
+- Config your blog name.
 
-![](/images/readme//icon.gif)
+```yml
+name: <blog-name>
+```
 
-如果你只想要我博客里的头像效果，你只需要拿 leopardpan.github.io/_includes/side-panel.html 文件里面 `头像效果` 和 leopardpan.github.io/css/main.css 里面最后面 `头像效果` 部分就行了。
+- These configuration in `author:` is for links to icons in footer. If you want to add more link icons, modify `_includes/footer.html` file.
 
+```yml
+author:
+  facebook:         your-id
+  twitter:          your-id
+  github:           your-id
+  linkedin:         your-id
+  medium:           your-id
+  tumblr:           your-id
+  email:            your-id@your-email.com
+```
 
-***
+- Change copyright year and name in footer.
 
-#### 博客首页   
+```yml
+copyright:
+  year:             2017
+  name:             Kiko
+```
 
-![](/images/readme//img4.png)   
+### Google analytics
 
-***  
+- Change this to your Google Analytic ID.
 
-#### 文章详情   
+```yml
+google-analytics:
+  id:               "your-id"
+```
 
+### Disqus
 
+- Change this to your Disqus short name.
 
-![](/images/readme//img3.png)
+```yml
+disqus:
+  id:               "your-id"
+```
 
+### URL
 
-![](/images/readme//img2.png)
+- Config your domain.
 
+```yml
+url: "https://<your-name>.github.io"
+```
 
-![](/images/readme//img1.png)
+- **NOTE** When if running locally, change url to 
 
+```yml
+url: "https://localhost:4000"
+```
 
-#### 感谢   
+- Change this to your branch name where _gh-pages_ resides. 
+- **NOTE** apply only if you used __Method 2__ for installation.
 
-本博客在[Vno Jekyll](https://github.com/onevcat/vno-jekyll)基础上修改的。  
+```yml
+baseurl: "/<branch-name>"
+```
+
+## Run in Local
+
+1. Download or clone your remote repository.
+2. Go inside folder. First, run `rake geminstall`. 
+3. Second, run `jekyll serve` or `rake preview`. This will build a website which you can access [https://localhost:4000](https://localhost:4000). Make sure that `url` in `_config.yml` file is `url: "https://localhost:4000"`. You need to have [Jekyll](https://jekyllrb.com/docs/installation/) installed to do this.
+
+## Rakefile Usage
+
+```bash
+# Create new post
+$ rake post title="A Title" [date="2015-08-16"] [tags="[tag1, tag2]"] 
+
+# Create new draft post
+$ rake draft title="A Title" [date="2015-08-16"] [tags="[tag1, tag2]"]
+
+# Install Jekyll Plugins. Do before running in local.
+$ rake geminstall
+
+# Run in Local
+$ rake preview
+```
+
+## License
+
+This theme is released under MIT License.

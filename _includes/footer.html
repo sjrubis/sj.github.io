@@ -1,91 +1,67 @@
-<section class="footer">
-    <footer>
-        <div class = "footer_div">  
-        <nav class="cover-navigation navigation--social">
-          <ul class="navigation">
+<!-- Documents about icons are here: http://fontawesome.io/icons/ -->
+<div class="footer">
+  <hr />
+  <div class="footer-link">
+    {% if site.author.facebook %}
+    <a href="https://www.facebook.com/{{ site.author.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.youtubeUser %}
+    <a href="https://www.youtube.com/user/{{ site.author.youtubeUser }}"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.youtubeChannel %}
+    <a href="https://www.youtube.com/channel/{{ site.author.youtubeChannel }}"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+    {% endif %}
 
-          {% if site.social.weibo %}
-          <!-- Weibo -->
-          <li class="navigation__item_social">
-            <a href="http://weibo.com/{{site.social.weibo}}" title="@{{site.social.weibo}} 的微博" target="_blank">
-              <i class='social fa fa-weibo fa-2x'></i>
-              <span class="label">Weibo</span>
-            </a>
-          </li>
-          {% endif %}
+    {% if site.author.twitter %}
+    <a href="https://twitter.com/{{ site.author.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    {% endif %}
 
-          {% if site.social.github %}
-          <!-- Github -->
-          <li class="navigation__item_social">
-            <a href="https://github.com/{{site.social.github}}" title="@{{site.social.github}} 的 Github" target="_blank">
-              <i class='social fa fa-github fa-2x'></i>
-              <span class="label">Github</span>
-            </a>
-          </li>
-          {% endif %}
-          
-          {% if site.social.twitter %}
-          <!-- Twitter -->
-          <li class="navigation__item_social">
-            <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
-              <i class='social fa fa-twitter fa-2x'></i>
-              <span class="label">Twitter</span>
-            </a>
-          </li>
-          {% endif %}
+    {% if site.author.github %}
+    <a href="https://github.com/{{ site.author.github }}"><i class="fa fa-github" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.stackoverflow %}
+    <a href="http://stackoverflow.com/users/{{ site.author.stackoverflow }}"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.quora %}
+    <a href="https://www.quora.com/profile/{{ site.author.quora }}"><i class="fa fa-quora" aria-hidden="true"></i></a>
+    {% endif %}
 
-          {% if site.social.gplus %}
-          <!-- Google Plus -->
-          <li class="navigation__item_social">
-            <a href="https://plus.google.com/{{site.social.gplus}}" rel="author" title="Google+" target="_blank">
-              <i class='social fa fa-google-plus-square fa-2x'></i>
-              <span class="label">Google Plus</span>
-            </a>
-          </li>
-          {% endif %}
+    {% if site.author.linkedin %}
+    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.pinterest %}
+    <a href="https://www.pinterest.com/{{ site.author.pinterest }}"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.googlePlus %}
+    <a href="https://plus.google.com/{{ site.author.googlePlus }}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.instagram %}
+    <a href="https://www.instagram.com/{{ site.author.instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    {% endif %}
+	
+	{% if site.author.reddit %}
+    <a href="https://www.reddit.com/user/{{ site.author.reddit }}"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+    {% endif %}
 
-          <!-- RSS -->
-          <li class="navigation__item_social">
-            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
-              <i class='social fa fa-rss fa-2x'></i>
-              <span class="label">RSS</span>
-            </a>
-          </li>
+    {% if site.author.medium %}
+    <a href="https://medium.com/@{{ site.author.medium }}"><i class="fa fa-medium" aria-hidden="true"></i></a>
+    {% endif %}
 
-          {% if site.social.mail %}
-          <!-- Email -->
-          <li class="navigation__item_social">
-            <a href="mailto:{{site.social.mail}}" title="Contact me">
-              <i class='social fa fa-envelope fa-2x'></i>
-              <span class="label">Email</span>
-            </a>
-          </li>
-          {% endif %}
+    {% if site.author.tumblr %}
+    <a href="https://{{ site.author.tumblr }}.tumblr.com"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+    {% endif %}
 
-          </ul>
-        </nav>
+    {% if site.author.email %}
+    <a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    {% endif %}
 
-        </div>
-
-        <div class = "footer_div">  
-           <p class="copyright text-muted">
-            Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} Theme by <a href="http://baixin.io/">leopardpan</a> |
-            <iframe
-                style="margin-left: 2px; margin-bottom:-5px;"
-                frameborder="0" scrolling="0" width="91px" height="20px"
-                src="https://ghbtns.com/github-btn.html?user=leopardpan&repo=leopardpan.github.io&type=star&count=true" >
-            </iframe>
-            </p>
-        	<div align="right">
-    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-          <!-- 访问统计 -->
-          <span id="busuanzi_container_site_pv">
-            本站总访问量
-            <span id="busuanzi_value_site_pv"></span>次
-          </span>
-
-        </div>
-        <div>
-    </footer>
-</section>
+  </div>
+  © {{ site.copyright.year }} {{ site.copyright.name }}. All rights reserved.
+</div>
