@@ -3,7 +3,7 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "SJ"
+name:               ""
 
 author:
 #  facebook:         your-id
@@ -24,7 +24,7 @@ author:
 
 copyright:
   year:             2018
-  name:             
+  name:             SJ
 
 # Google-analytics
 google-analytics:
