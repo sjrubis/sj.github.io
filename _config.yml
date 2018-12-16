@@ -57,10 +57,10 @@ kramdown:
 nav:
 #  - name:           "About"
 #    url:            "/about"
-  - name:           "归档"
-    url:            "/archive"
-  - name:           "标签"
-    url:            "/tags"
+#  - name:           "归档"
+#    url:            "/archive"
+#  - name:           "标签"
+#   url:            "/tags"
 #  - name:           "Github"
 #    url:            "https://github.com/AWEEKJ/Kiko-plus"
 
